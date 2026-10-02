@@ -40,6 +40,7 @@ Clone such repositories yourself and use **Install from Path**.
 | App | What it does | Repository | Branch |
 |---|---|---|---|
 | AI-DLC Studio (`aidlc-studio`) | One Action Center for every AI-DLC Workflows approval gate, question and recovery decision across your repositories | [warren830/kirocrew-app-aidlc](https://github.com/warren830/kirocrew-app-aidlc) | `release` |
+| ADLC 控制台 (`workshop-customizer`) | The ADLC platform on Amazon Bedrock AgentCore: build, evaluate and canary-release agents with evidence-gated promotion, measure a skill's lift on the real agent, and turn a customer brief into a class-ready Workshop scenario pack (Autopilot) | [warren830/kirocrew-app-adlc](https://github.com/warren830/kirocrew-app-adlc) (`app/`) | `release` |
 
 ## Add an app
 

@@ -4,5 +4,12 @@
     "gitUrl": "https://github.com/warren830/kirocrew-app-aidlc",
     "repo": "https://github.com/warren830/kirocrew-app-aidlc",
     "branch": "release"
+  },
+  {
+    "name": "workshop-customizer",
+    "gitUrl": "https://github.com/warren830/kirocrew-app-adlc",
+    "repo": "https://github.com/warren830/kirocrew-app-adlc",
+    "branch": "release",
+    "subdirectory": "app"
   }
 ]
