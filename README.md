@@ -11,9 +11,29 @@ In KiroCrew, open **Discover → Add source** (External Registries → Add Regis
 | Repo | `https://github.com/warren830/AI-for-SW-Engineer` |
 | Branch | `main` |
 
-The apps below then appear in Discover, where you can install and update them. KiroCrew clones this
-repository and each app's repository itself, so the gateway needs direct HTTPS access to GitHub.
-Grant trust to each app individually when prompted; blanket third-party trust is not needed.
+The apps below then appear in Discover, where you can install and update them. Grant trust to each
+app individually when prompted; blanket third-party trust is not needed.
+
+### Network requirement: KiroCrew must reach GitHub directly
+
+KiroCrew clones this registry and each app repository itself. For browsing, app details and installs it
+clones **anonymously, on purpose**:
+- your shell's proxy variables (`HTTPS_PROXY`, …) are stripped;
+- your global git config is ignored;
+- SSH keys and agents are hidden.
+
+So a VPN or proxy in **system-proxy mode is not enough**: Discover shows `0 apps`, or the app page
+hangs on "Loading app details…". Then:
+
+1. **Recommended:** switch your VPN/proxy client to **TUN / enhanced / global mode**, so all traffic is
+   routed, then refresh the source in Discover. In Clash, this is the TUN (virtual network adapter) switch.
+2. **If that is not possible:** download the app's source zip from its GitHub Releases page in the browser,
+   unzip it, and use **Install from Path** with that directory. Updates then mean downloading the next
+   release again.
+
+Private or company-internal Git hosts (for example `gitlab.aws.dev`, which allows only Midway-signed SSH)
+cannot be used as a source for these apps, because KiroCrew never uses your credentials for these clones.
+Clone such repositories yourself and use **Install from Path**.
 
 ## Apps
 
